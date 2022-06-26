@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send(`<h1>Welcome to the game zone</h1>`);
+  res.send(`<h1>Welcome to the Triceria game zone</h1>`);
 });
 
 app.use("/game/start", (req, res) => {
