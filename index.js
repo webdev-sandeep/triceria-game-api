@@ -20,7 +20,6 @@ const assignValue = () => {
 };
 
 const app = express();
-const PORT = 5000;
 
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
@@ -58,6 +57,8 @@ app.use("/game/start", (req, res) => {
   res.send(totalGames);
 });
 
-app.listen(PORT || 5000, () => {
-  console.log(`server is running at http://localhost:${PORT || 5000}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(
+    `server is running at http://localhost:${process.env.PORT || 5000}`
+  );
 });
